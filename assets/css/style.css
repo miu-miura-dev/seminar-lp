@@ -1,6 +1,4 @@
-* {
-  outline: 1px solid red;
-}
+
 
 /* =========================
    Reset / Base
@@ -518,10 +516,6 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-
-  .cta-banner__inner {
-
-  }
 
   .cta-banner__text {
     font-size: 16px;
