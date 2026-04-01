@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お申し込みフォーム | DESIGN CAMPUS</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+    Header
+  ========================= -->
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__logo">
+        <a href="index.html">
+          <img src="assets/images/logo.svg" alt="Design Campus">
+        </a>
+      </div>
+
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li><a href="index.html#features">本講座の特徴</a></li>
+          <li><a href="index.html#courses">講座一覧</a></li>
+          <li><a href="index.html#faq">よくあるご質問</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__cta">
+        <a href="contact.html" class="header__button">お申し込みはこちら</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================
+    Contact
+  ========================= -->
+  <section class="contact">
+    <div class="contact__inner">
+      <h1 class="contact__title">1dayお申し込みフォーム</h1>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="contact-form__group">
+          <label class="contact-form__label">
+            氏名 <span class="contact-form__required">必須</span>
+          </label>
+          <input type="text" name="name" class="contact-form__input" required>
+          <p class="error-message"></p>
+        </div>
+
+        <div class="contact-form__group">
+          <label class="contact-form__label">
+            メールアドレス <span class="contact-form__required">必須</span>
+          </label>
+          <input type="email" name="email" class="contact-form__input" required>
+          <p class="error-message"></p>
+        </div>
+
+        <div class="contact-form__group">
+          <label class="contact-form__label">
+            講座希望
+          </label>
+          <input type="text" name="course" class="contact-form__input">
+        </div>
+
+        <div class="contact-form__group">
+          <p class="contact-form__label">ご相談</p>
+
+          <label class="contact-form__check">
+            <input type="checkbox" name="consult">
+            <span>デザインについて相談したい</span>
+          </label>
+
+          <label class="contact-form__check">
+            <input type="checkbox" name="consult">
+            <span>集客について相談したい</span>
+          </label>
+        </div>
+
+        <div class="contact-form__actions">
+          <button type="submit" class="contact-form__submit">送信</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- =========================
+    Footer
+  ========================= -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__copy">Copyright 2023 DESIGN CAMPUS</p>
+    </div>
+  </footer>
+
+<script src="assets/js/main.js"></script></body>
+</html>
