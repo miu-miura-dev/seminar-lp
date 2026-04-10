@@ -10,6 +10,9 @@
 }
 
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: sans-serif;
   color: #333;
 }
@@ -27,27 +30,48 @@ a {
    Header
 ========================= */
 .header {
-  background: #fff;
-  border-bottom: 1px solid #ddd;
+  background: #ffffff;
+  height: 82px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .header__inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 12px 20px;
   display: flex;
+  height: 100%;
+  max-width: 1440px;
+
+  padding: 0 48px;
   align-items: center;
-  justify-content: space-between;
+  margin: 0 auto;
+
 }
 
-.header__logo img {
-  height: 40px;
+/* ロゴ */
+.header__logo{
+  height: 36px;
+  width: 176px;
+
+}
+
+/* ナビ */
+.header__nav{
+  margin-left: auto;
+  padding: 0 46px ;
 }
 
 .header__list {
   display: flex;
+  gap: 64px;
   list-style: none;
-  gap: 32px;
+
 }
 
 .header__list a {
@@ -55,13 +79,107 @@ a {
   font-size: 14px;
 }
 
+/* CTA */
 .header__button {
-  display: inline-block;
-  background: #f95b87;
+  background: #ff4d6d;
   color: #fff;
-  padding: 12px 24px;
+  padding: 16px 20px;
+  text-decoration: none;
   font-size: 14px;
 }
+
+.menu-sp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 200;
+
+  display: none;
+
+  /* 👇追加 */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.menu-sp.active {
+  display: block;
+}
+
+/* ×ボタン */
+.menu-sp__close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* リスト */
+.menu-sp__list {
+  list-style: none;
+  padding: 0;
+  margin-top: 120px;
+}
+
+.menu-sp__list li {
+  margin-bottom: 50px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* ボタン */
+.menu-sp__button {
+  display: inline-block;
+  margin-top: 40px;
+  background: #ff4d6d;
+  color: #fff;
+  padding: 14px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+
+  .header {
+    height: 64px;
+  }
+
+  .header__inner{
+    padding: 0 20px;
+  }
+
+  /* ナビ消す */
+  .header__nav {
+    display: none;
+  }
+
+  .header__button {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-left: auto;
+  }
+
+  .hamburger span {
+    width: 28px;
+    height: 2px;
+    background: #333;
+  }
+
+  .header__cta {
+    display: none;
+  }
+}
+
 
 /* =========================
    Hero
@@ -365,6 +483,7 @@ a {
 
 .features__inner {
   width: 1020px;
+  max-width: 100%;
   height: 463px;
   margin: 0 auto;
 }
@@ -502,6 +621,7 @@ a {
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
+  border-radius: 4px;
 }
 
 /* アイコン */
@@ -519,11 +639,13 @@ a {
 
   .cta-banner__text {
     font-size: 16px;
+    max-width: 80%;
   }
 
   .cta-banner__button {
     height: 64px;
     font-size: 16px;
+    max-width: 80%;
   }
 }
 
@@ -626,6 +748,7 @@ a {
   color: #333;
   margin-bottom: 13px;
   width: 440px;
+  max-width: 90%;
 }
 
 .course-card__info {
@@ -1009,6 +1132,7 @@ a {
    Footer
 ========================= */
 .footer {
+    margin-top: auto;
   background: #18b7c9;
   padding: 28px 20px;
 }
@@ -1036,14 +1160,15 @@ a {
 
 .contact__inner {
   max-width: 720px;
-  margin: 0 auto;
+  margin: 82px auto 0;
+
 }
 
 .contact__title {
   text-align: center;
   font-size: 24px;
   font-weight: 700;
-  color: #18b7c9;
+  color: #0FABB5;
   margin-bottom: 48px;
 }
 
@@ -1065,8 +1190,7 @@ a {
   padding: 2px 8px;
   font-size: 12px;
   color: #fff;
-  background: #18b7c9;
-  border-radius: 2px;
+  background: #0FABB5;
 }
 
 .contact-form__input {
@@ -1079,7 +1203,7 @@ a {
 }
 
 .contact-form__input:focus {
-  border-color: #18b7c9;
+  border-color: #0FABB5;
 }
 
 .contact-form__note {
@@ -1091,7 +1215,7 @@ a {
 
 .contact-form__check {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
   font-size: 14px;
   line-height: 1.8;
@@ -1100,6 +1224,27 @@ a {
 
 .contact-form__check + .contact-form__check {
   margin-top: 8px;
+}
+
+.contact-form__check input {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cccccc;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.contact-form__agree{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #333;  
+  justify-content: center;
+  margin-top: 72px; 
 }
 
 .contact-form__actions {
@@ -1116,6 +1261,8 @@ a {
   font-size: 14px;
   text-align: center;
   border-radius: 2px;
+  border: none;
+
 }
 
 .contact-form__submit:hover {
@@ -1125,9 +1272,11 @@ a {
 /* =========================
    Thanks
 ========================= */
+
 .thanks {
   background: #fff;
-  padding: 120px 20px 160px;
+  margin-top: 82px;
+  padding: 230px 20px 160px;
 }
 
 .thanks__inner {
@@ -1137,18 +1286,22 @@ a {
 }
 
 .thanks__message {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 600;
   font-size: 24px;
-  color: #18b7c9;
-  margin-bottom: 40px;
+  color: #0FABB5;
+  margin-bottom: 80px;
 }
 
 .thanks__button {
   display: inline-block;
-  padding: 12px 28px;
-  border: 1px solid #18b7c9;
-  color: #18b7c9;
-  font-size: 14px;
+  padding: 12px 52px;
+  border: 1px solid #0FABB5;
+  color: #0FABB5;
+  font-size: 16px;
+  font-weight: 600;
   background: #fff;
+  border-radius: 4px;
 }
 
 .thanks__button:hover {

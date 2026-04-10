@@ -8,7 +8,6 @@
 </head>
 
 <body>
-
   <!-- =========================
     Header
   ========================= -->
@@ -23,18 +22,38 @@
       <!-- ナビ -->
       <nav class="header__nav">
         <ul class="header__list">
-          <li><a href="#">本講座の特徴</a></li>
-          <li><a href="#">講座一覧</a></li>
-          <li><a href="#">よくあるご質問</a></li>
+          <li><a href="#features">本講座の特徴</a></li>
+          <li><a href="#courses">講座一覧</a></li>
+          <li><a href="#faq">よくあるご質問</a></li>
         </ul>
       </nav>
 
+      <!-- ハンバーガー -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <!-- CTAボタン -->
       <div class="header__cta">
-  <a href="contact.html" class="header__button">お申し込みはこちら</a>    </div>
-
-    </div>
+        <a href="contact.html" class="header__button">お申し込みはこちら</a>    </div>
+      </div>
   </header>
+
+  <!-- ハンバーガー -->
+  <div class="menu-sp" id="menu">
+  <div class="menu-sp__close" id="close">×</div>
+    <ul class="menu-sp__list">
+      <li>本講座の特徴</li>
+      <li>講座一覧</li>
+      <li>よくあるご質問</li>
+    </ul>
+    <a href="contact.html" class="menu-sp__button">
+      申し込みはこちら
+    </a>
+  </div>
+
 
   <!-- =========================
     Hero
@@ -92,7 +111,7 @@
   <!-- =========================
     Features
   ========================= -->
-  <section class="features">
+  <section class="features" id="features">
     <div class="features__inner">
       <h2 class="features__title">本講座の特徴</h2>
 
@@ -151,7 +170,7 @@
     Courses
   ========================= -->
 
-  <section class="courses">
+  <section class="courses" id="courses">
     <div class="courses__inner">
       <div class="courses__header">
         <p class="courses__lead">こんなことが学べる！</p>
@@ -263,7 +282,7 @@
   <!-- =========================
     FAQ
   ========================= -->
-  <section class="faq">
+  <section class="faq" id="faq"r>
     <div class="faq__inner">
       <h2 class="faq__title">よくあるご質問</h2>
 

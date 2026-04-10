@@ -17,7 +17,7 @@
     <div class="header__inner">
       <div class="header__logo">
         <a href="index.html">
-          <img src="assets/images/logo.svg" alt="Design Campus">
+         <img src="assets/images/icon/icon-logo.png" alt="Design Campus">
         </a>
       </div>
 
@@ -29,23 +29,43 @@
         </ul>
       </nav>
 
+      <!-- ハンバーガー -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <div class="header__cta">
         <a href="contact.html" class="header__button">お申し込みはこちら</a>
       </div>
     </div>
   </header>
 
+  <!-- ハンバーガー -->
+  <div class="menu-sp" id="menu">
+  <div class="menu-sp__close" id="close">×</div>
+    <ul class="menu-sp__list">
+      <li>本講座の特徴</li>
+      <li>講座一覧</li>
+      <li>よくあるご質問</li>
+    </ul>
+    <a href="contact.html" class="menu-sp__button">
+      申し込みはこちら
+    </a>
+  </div>
+
   <!-- =========================
     Contact
   ========================= -->
   <section class="contact">
     <div class="contact__inner">
-      <h1 class="contact__title">1dayお申し込みフォーム</h1>
+      <h1 class="contact__title">1day講座申し込みフォーム</h1>
 
       <form class="contact-form" id="contactForm" novalidate>
         <div class="contact-form__group">
           <label class="contact-form__label">
-            氏名 <span class="contact-form__required">必須</span>
+            名前 <span class="contact-form__required">必須</span>
           </label>
           <input type="text" name="name" class="contact-form__input" required>
           <p class="error-message"></p>
@@ -61,23 +81,36 @@
 
         <div class="contact-form__group">
           <label class="contact-form__label">
-            講座希望
+            電話番号
           </label>
-          <input type="text" name="course" class="contact-form__input">
+          <input type="text" name="phone" class="contact-form__input">
         </div>
 
         <div class="contact-form__group">
-          <p class="contact-form__label">ご相談</p>
-
-          <label class="contact-form__check">
-            <input type="checkbox" name="consult">
-            <span>デザインについて相談したい</span>
+          <label class="contact-form__label">
+            参加希望 <span class="contact-form__required">必須</span>
           </label>
 
           <label class="contact-form__check">
             <input type="checkbox" name="consult">
-            <span>集客について相談したい</span>
+            <span>
+              12/10(日)<br>
+              2時間でかんたんに名刺デザインを作成してみよう！
+            </span>
           </label>
+
+          <label class="contact-form__check">
+            <input type="checkbox" name="consult">
+            <span>
+              12/17(日)<br>
+              集客のためのWeb活用術〜SEOとユーザビリティのお話〜
+            </span>
+          </label>
+
+          <label class="contact-form__agree">
+          <input type="checkbox" name="consult">
+          <span>プライバシーポリシーに同意する</span>
+        </label>
         </div>
 
         <div class="contact-form__actions">
@@ -95,6 +128,8 @@
       <p class="footer__copy">Copyright 2023 DESIGN CAMPUS</p>
     </div>
   </footer>
+
+  <script src="assets/js/main.js"></script>
 
 <script src="assets/js/main.js"></script></body>
 </html>

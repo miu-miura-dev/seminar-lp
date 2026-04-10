@@ -15,10 +15,11 @@
     <div class="header__inner">
       <div class="header__logo">
         <a href="index.html">
-          <img src="assets/images/logo.svg" alt="Design Campus">
+          <img src="assets/images/icon/icon-logo.png" alt="Design Campus">
         </a>
       </div>
 
+      <!-- ナビ -->
       <nav class="header__nav">
         <ul class="header__list">
           <li><a href="index.html#features">本講座の特徴</a></li>
@@ -27,18 +28,38 @@
         </ul>
       </nav>
 
+      <!-- ハンバーガー -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <div class="header__cta">
         <a href="contact.html" class="header__button">お申し込みはこちら</a>
       </div>
     </div>
   </header>
 
+  <!-- ハンバーガー -->
+  <div class="menu-sp" id="menu">
+  <div class="menu-sp__close" id="close">×</div>
+    <ul class="menu-sp__list">
+      <li>本講座の特徴</li>
+      <li>講座一覧</li>
+      <li>よくあるご質問</li>
+    </ul>
+    <a href="contact.html" class="menu-sp__button">
+      申し込みはこちら
+    </a>
+  </div>
+
   <!-- =========================
     Thanks
   ========================= -->
   <section class="thanks">
     <div class="thanks__inner">
-      <p class="thanks__message">お申し込み送信ありがとうございました。</p>
+      <p class="thanks__message">申込いただき<span class="sp-only"><br></span>ありがとうございました。</p>
       <a href="index.html" class="thanks__button">TOPへ戻る</a>
     </div>
   </section>
@@ -52,5 +73,6 @@
     </div>
   </footer>
 
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
